@@ -1,0 +1,323 @@
+{
+  "schemaVersion": "1.2.0",
+  "status": "implemented",
+  "created": "2026-09-22",
+  "protocolId": "pointing-single-208-post104-continuous-v3",
+  "referenceProject": "../adaptive-steering/",
+  "decisionStatus": {
+    "conditions": "user_specified_defaults_editable_in_settings",
+    "mouseAnd27InchDisplay": "user_specified",
+    "trainingTrialsPerCondition": "user_confirmed_208",
+    "participantDesign": "main_single_training_pilot_selected_training_then_all_four_post",
+    "targetCount": "design_proposal",
+    "familiarizationAndPostCounts": "no_added_familiarization_post_26_each",
+    "breakInterval": "phase_and_condition_boundaries",
+    "trainingOrder": "main_single_condition_pilot_selected_conditions_by_assignment_row"
+  },
+  "conditions": [
+    {
+      "id": "C1",
+      "labelJa": "短距離・大ターゲット",
+      "amplitudeMm": 90,
+      "widthMm": 20,
+      "nominalIdBits": 2.4594316186372973,
+      "layoutDiameterMm": 90.66102091791146,
+      "predictionMs": 614.1976913547135
+    },
+    {
+      "id": "C2",
+      "labelJa": "短距離・小ターゲット",
+      "amplitudeMm": 90,
+      "widthMm": 10,
+      "nominalIdBits": 3.321928094887362,
+      "layoutDiameterMm": 90.66102091791146,
+      "predictionMs": 769.4470570797251
+    },
+    {
+      "id": "C3",
+      "labelJa": "長距離・大ターゲット",
+      "amplitudeMm": 180,
+      "widthMm": 20,
+      "nominalIdBits": 3.321928094887362,
+      "layoutDiameterMm": 181.32204183582292,
+      "predictionMs": 769.4470570797251
+    },
+    {
+      "id": "C4",
+      "labelJa": "長距離・小ターゲット",
+      "amplitudeMm": 180,
+      "widthMm": 10,
+      "nominalIdBits": 4.247927513443585,
+      "layoutDiameterMm": 181.32204183582292,
+      "predictionMs": 936.1269524198453
+    }
+  ],
+  "prediction": {
+    "sourceId": "S1",
+    "url": "https://www.yorku.ca/mack/chi2026.pdf",
+    "location": "Fig. 9(a), neutral instruction, nominal ID",
+    "formula": "171.5 + 180 * log2(A/W + 1)",
+    "equalConditionMeanMs": 772.3046894835022,
+    "status": "literature_transfer_prediction_not_observed",
+    "showToParticipant": false,
+    "useAsTimeLimit": false
+  },
+  "task": {
+    "type": "multidirectional_point_select",
+    "targetShape": "circle",
+    "targetCount": 13,
+    "positionIndexDirection": "clockwise_from_top",
+    "step": 6,
+    "selectionOrder": [
+      0,
+      6,
+      12,
+      5,
+      11,
+      4,
+      10,
+      3,
+      9,
+      2,
+      8,
+      1,
+      7,
+      0
+    ],
+    "countedMovementsPerSequence": 13,
+    "startSelectionCounted": false,
+    "amplitudeDefinition": "straight_line_between_successive_target_centers",
+    "widthDefinition": "visible_and_clickable_circle_diameter",
+    "nominalIdFormula": "log2(A/W + 1)",
+    "layoutDiameterFormula": "A / cos(pi / (2*N))",
+    "hitTest": "distance_to_target_center <= W/2",
+    "strokePlacement": "inside",
+    "showNumbers": false,
+    "showLayoutCircle": false,
+    "showCenterDots": false,
+    "showFutureTargets": false,
+    "pathRestricted": false,
+    "cursorWarp": false,
+    "minimumMarginMm": 20
+  },
+  "display": {
+    "diagonalInches": 27,
+    "aspectRatio": null,
+    "nativeResolution": null,
+    "osScale": null,
+    "browserZoom": null,
+    "devicePixelRatio": null,
+    "cssPxPerMm": null,
+    "calibrationRequired": true,
+    "calibrationMethod": "measure_known_css_length_with_physical_ruler_then_verify_100_mm_horizontal_and_vertical",
+    "units": "mm",
+    "renderCoordinates": "css_px",
+    "devicePixelRatioUse": "canvas_backing_store_only",
+    "autoScaleStimuliToFit": false,
+    "pauseOnDisplayChange": true
+  },
+  "mouse": {
+    "model": null,
+    "dpi": null,
+    "sensitivity": null,
+    "acceleration": null,
+    "acceptedPointerType": "mouse",
+    "acceptedButton": 0
+  },
+  "protocol": {
+    "participantDesign": "between_participant_single_training_condition",
+    "main": {
+      "trainingConditionCount": 1,
+      "familiarizationTrials": 0,
+      "trainingTrials": 208,
+      "trainingSequenceLengths": [
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "postSequencesPerCondition": 2,
+      "postTrialsPerCondition": 26,
+      "postEnabled": true,
+      "counts": {
+        "training": 208,
+        "post": 104,
+        "all": 312
+      },
+      "trainingTrialsPerCondition": 208
+    },
+    "pilot": {
+      "samePlanAsMain": false,
+      "protocolId": "pointing-pilot-selected-208-post104-continuous-v4",
+      "trainingConditionCount": "selected_1_to_4",
+      "trainingTrialsPerCondition": 208,
+      "trainingOrder": "selected_conditions_in_assignment_row_order",
+      "postTrialsPerCondition": 26,
+      "postTiming": "once_after_all_selected_training_conditions",
+      "exportMode": "pilot"
+    },
+    "break": {
+      "afterPhase": true,
+      "afterCondition": true,
+      "enforcedDurationSeconds": null,
+      "timer": "elapsed_count_up"
+    },
+    "betweenSequences": {
+      "continueSameCondition": true,
+      "sameConditionTimer": "previous_successful_click_starts_next_movement",
+      "unmeasuredTopTargetStartRequired": "initial_start_or_after_break_only"
+    }
+  },
+  "assignment": {
+    "method": "experimenter_selected_single_training_condition_and_balanced_post_order",
+    "enrollmentIndexBase": 1,
+    "rowIndexFormula": "(enrollmentIndex - 1) % 4",
+    "rows": [
+      [
+        "C1",
+        "C2",
+        "C4",
+        "C3"
+      ],
+      [
+        "C2",
+        "C3",
+        "C1",
+        "C4"
+      ],
+      [
+        "C3",
+        "C4",
+        "C2",
+        "C1"
+      ],
+      [
+        "C4",
+        "C1",
+        "C3",
+        "C2"
+      ]
+    ],
+    "participantIdHashUsed": false,
+    "trainingLayout": "single_condition_208_continuous_movements",
+    "familiarization": "none",
+    "postRoundRowOffsets": [
+      1,
+      3
+    ],
+    "postLayout": "one_sequence_per_condition_per_round",
+    "conditionSwitchOnlyAtSequenceBoundary": true,
+    "saveFullSequencePlan": true,
+    "enrollmentIndexScope": "within_training_condition"
+  },
+  "measurement": {
+    "selectionEvent": "primary_mouse_left_pointerdown",
+    "requireReleaseBeforeNextSelection": true,
+    "clock": "performance.now_at_handler_entry",
+    "rawEventTimestampLoggedSeparately": true,
+    "primaryMt": "first_current_target_down_minus_previous_successful_target_down",
+    "firstMissCounted": true,
+    "afterFirstMiss": "retain_first_result_and_reaim_same_target_until_success",
+    "correctionClicksCountedAsNewTrials": false,
+    "secondaryMt": "successful_completion_down_minus_previous_successful_target_down",
+    "interruptBeforeFirstClick": "retain_uncounted_attempt_then_reanchor_source_and_retry_same_planned_trial",
+    "interruptAfterFirstClick": "retain_counted_result_then_reanchor_destination_and_continue_next_planned_trial",
+    "completionMtAcrossInterruption": null,
+    "pauseTriggers": [
+      "Escape",
+      "fullscreen_exit",
+      "window_blur",
+      "document_hidden",
+      "viewport_change",
+      "device_pixel_ratio_change",
+      "pointercancel"
+    ],
+    "firstResultNeverOverwritten": true,
+    "automaticOutlierDeletion": false,
+    "trajectoryClock": "handler_performance_now_with_original_event_timestamps_and_segment_time_origin"
+  },
+  "instructionJa": "青く強調された円を、できるだけ速く、かつ正確に、左のマウスボタンでクリックしてください。クリックすると次の円が強調されます。一周して上の円に戻っても、続けて次に強調された円へ移動してください。同じ円を開始用にもう一度クリックする必要はありません。円の外をクリックした場合は、同じ円をもう一度クリックしてください。円までの移動経路は自由です。ボタンを押したまま移動する必要はありません。休憩画面が出たら、準備ができてから再開してください。途中で休憩したい場合はEscキーを押してください。",
+  "ui": {
+    "reference": "adaptive-steering actual HTML and JS",
+    "colors": {
+      "background": "#f5f7fb",
+      "panel": "#ffffff",
+      "ink": "#172033",
+      "muted": "#647086",
+      "line": "#d8dee9",
+      "strongLine": "#b8c1d1",
+      "primary": "#1f6feb",
+      "warning": "#9a6700",
+      "danger": "#c43a31"
+    },
+    "screens": [
+      "setup",
+      "settings",
+      "calibration",
+      "briefing",
+      "ready",
+      "task",
+      "break",
+      "completion"
+    ],
+    "fullscreenDuringTask": true,
+    "researcherControlsHiddenDuringTask": true,
+    "scoresVisibleDuringTask": false,
+    "participantConditionNames": "neutral_codes_only",
+    "missFeedback": "brief_current_target_border_change_without_input_lock",
+    "sounds": false,
+    "completionScreenRetainedUntilSaveAcknowledged": true,
+    "conditionSelection": "main_radio_single_pilot_checkboxes_multiple",
+    "editableConditions": [
+      "amplitudeMm",
+      "widthMm"
+    ]
+  },
+  "storage": {
+    "implementationStatus": "implemented",
+    "checkpoint": "IndexedDB",
+    "firstResultCountAndStateAtomic": true,
+    "writes": "ordered_asynchronous_queue",
+    "flushBeforeNextSequence": "phase_or_condition_change_only",
+    "storageFailure": "pause_before_next_sequence_and_offer_memory_export",
+    "crashRecovery": "last_committed_event_uncommitted_tail_may_be_lost",
+    "externalUpload": false,
+    "concurrentWritersPerSession": 1,
+    "sessionId": "UUID",
+    "rawDataPreserved": true,
+    "exports": [
+      "trials.csv",
+      "session.json"
+    ],
+    "autoDownloadAtCompletion": "trials.csv_request_only",
+    "downloadRequestNotProofOfDiskSave": true,
+    "trialsRowUnit": "attempt",
+    "analysisFilter": "countedAsTrial == true and selected phase",
+    "logStartCorrectionAndRecoverySeparately": true,
+    "trajectorySampling": "input_events_not_animation_frames",
+    "trajectoryStageLabels": [
+      "primary",
+      "correction"
+    ],
+    "missingValue": "null_or_empty_never_zero",
+    "csvFormulaEscaping": true,
+    "continuousSequenceWrites": "asynchronous_without_waiting_or_extra_start_click"
+  },
+  "remainingDecisions": [
+    "sample_size_and_analysis_plan",
+    "actual_display_mouse_and_calibration"
+  ],
+  "updated": "2026-09-24"
+}

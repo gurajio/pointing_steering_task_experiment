@@ -1,0 +1,24 @@
+﻿source_id,source_url,location,bias_or_phase,A_reported,W_reported,unit,nominal_ID_calculated,mouse_mean_MT_ms,error_rate_percent,evidence,notes
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,accurate,320,20,px,4.087462841250339,1041,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,accurate,320,45,px,3.019899557437705,791,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,accurate,320,100,px,2.070389327891398,623,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,accurate,500,20,px,4.700439718141092,1152,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,accurate,500,45,px,3.598259323334614,870,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,accurate,500,100,px,2.584962500721156,707,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,neutral,320,20,px,4.087462841250339,926,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,neutral,320,45,px,3.019899557437705,713,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,neutral,320,100,px,2.070389327891398,553,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,neutral,500,20,px,4.700439718141092,1022,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,neutral,500,45,px,3.598259323334614,789,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,neutral,500,100,px,2.584962500721156,638,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,fast,320,20,px,4.087462841250339,862,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,fast,320,45,px,3.019899557437705,669,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,fast,320,100,px,2.070389327891398,503,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,fast,500,20,px,4.700439718141092,955,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,fast,500,45,px,3.598259323334614,741,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S1,https://www.yorku.ca/mack/chi2026.html,Figure 6 numerical labels,fast,500,100,px,2.584962500721156,591,,reported_rounded_condition_mean,A is author-reported; nominal-ID model used for design
+S2,https://www.sciencedirect.com/science/article/am/pii/S1071581924000454,Tables 1 and 3,session_8_after_training,36,12,mm,2.0,370,11.4,reported_rounded_condition_mean,Table 1 amplitude copied; body radius wording is ambiguous. See report.
+S2,https://www.sciencedirect.com/science/article/am/pii/S1071581924000454,Tables 1 and 3,session_8_after_training,63,9,mm,3.0,520,9.86,reported_rounded_condition_mean,Table 1 amplitude copied; body radius wording is ambiguous. See report.
+S2,https://www.sciencedirect.com/science/article/am/pii/S1071581924000454,Tables 1 and 3,session_8_after_training,90,6,mm,4.0,670,7.2,reported_rounded_condition_mean,Table 1 amplitude copied; body radius wording is ambiguous. See report.
+S2,https://www.sciencedirect.com/science/article/am/pii/S1071581924000454,Tables 1 and 3,session_8_after_training,124,4,mm,5.0,840,7.39,reported_rounded_condition_mean,Table 1 amplitude copied; body radius wording is ambiguous. See report.
+S2,https://www.sciencedirect.com/science/article/am/pii/S1071581924000454,Tables 1 and 3,session_8_after_training,189,3,mm,6.0,1010,9.48,reported_rounded_condition_mean,Table 1 amplitude copied; body radius wording is ambiguous. See report.

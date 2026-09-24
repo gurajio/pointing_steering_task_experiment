@@ -1,0 +1,103 @@
+{
+  "date": "2026-09-24",
+  "protocol": "pointing-between-28-post104-v1",
+  "automatedTests": {
+    "command": "node --test tests/experiment.test.cjs",
+    "passed": 10,
+    "failed": 0,
+    "processes": 1
+  },
+  "browser": {
+    "environment": "Codex in-app Chromium browser",
+    "mode": "pilot",
+    "participantId": "TEST_UI_20260924",
+    "calibration": "UI verification values, not physical ruler measurements",
+    "training": 28,
+    "postPerCondition": {
+      "C1": 26,
+      "C2": 26,
+      "C3": 26,
+      "C4": 26
+    },
+    "totalCounted": 132,
+    "csvRows": 132,
+    "clickEvents": 144,
+    "initialErrors": 1,
+    "correctionClicks": 1,
+    "trajectorySamples": 133,
+    "csvAndJsonFilesReadBack": true,
+    "restoredAfterReload": true,
+    "concurrentTabRejected": true,
+    "consoleErrors": 0
+  },
+  "notVerified": [
+    "physical dimensions on experiment monitor",
+    "external input/display latency",
+    "forced IndexedDB quota exhaustion",
+    "browser process kill during active write"
+  ],
+  "settingsAndMultipleTraining": {
+    "date": "2026-09-24",
+    "protocol": "pointing-selected-28-post104-v2",
+    "automatedTests": {
+      "passed": 14,
+      "failed": 0,
+      "processes": 1,
+      "selectionSets": 15,
+      "assignmentRowsPerSet": 4
+    },
+    "browser": {
+      "participantId": "TEST_MULTI_AW_20260924",
+      "mode": "pilot",
+      "trainingConditions": [
+        "C3",
+        "C1"
+      ],
+      "enrollmentIndex": 3,
+      "trainingPerCondition": 28,
+      "training": 56,
+      "postPerCondition": 26,
+      "post": 104,
+      "total": 160,
+      "csvRows": 160,
+      "clickEvents": 174,
+      "customC1": {
+        "amplitudeMm": 120,
+        "widthMm": 15
+      },
+      "exportValuesVerified": true,
+      "emptySelectionRejected": true,
+      "settingsApplyCancelResetVerified": true,
+      "zeroAndOverlapRejected": true,
+      "restoredNewAndLegacySessions": true,
+      "consoleErrors": 0,
+      "physicalCalibration": false
+    }
+  },
+  "continuous208": {
+    "date": "2026-09-24",
+    "protocol": "pointing-single-208-post104-continuous-v3",
+    "automatedTests": {
+      "passed": 17,
+      "failed": 0,
+      "processes": 1
+    },
+    "browser": {
+      "participantId": "TEST_CONTINUOUS_208",
+      "mode": "pilot",
+      "trainingCondition": "C4",
+      "training": 208,
+      "postPerCondition": 26,
+      "post": 104,
+      "total": 312,
+      "csvRows": 312,
+      "clickEvents": 320,
+      "trainingStartClicks": 1,
+      "zeroCenterDistanceRows": 0,
+      "trainingSeamsWithIdenticalEndAndStartTime": 15,
+      "csvAndJsonReadBack": true,
+      "consoleErrors": 0,
+      "physicalCalibration": false
+    }
+  }
+}

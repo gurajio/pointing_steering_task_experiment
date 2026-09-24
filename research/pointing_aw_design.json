@@ -1,0 +1,115 @@
+{
+  "status": "literature_based_initial_design_requires_pilot_calibration",
+  "created": "2026-09-22",
+  "task": "multidirectional_point_select",
+  "target_shape": "circle",
+  "target_count": 13,
+  "amplitude_definition": "straight_line_center_to_center_distance_between_successive_targets",
+  "width_definition": "diameter_of_visible_and_clickable_circle",
+  "units": "mm",
+  "clockwise_location_indices": [
+    0,
+    6,
+    12,
+    5,
+    11,
+    4,
+    10,
+    3,
+    9,
+    2,
+    8,
+    1,
+    7,
+    0
+  ],
+  "first_click_is_start": true,
+  "measured_movements_per_sequence": 13,
+  "weighting": "equal_trials_per_condition_and_equal_weight_per_participant",
+  "target_MT_ms": [
+    750,
+    800
+  ],
+  "pilot_practical_acceptance_ms": [
+    650,
+    850
+  ],
+  "target_phase": "beginning_of_main_experiment_after_minimal_task_familiarization",
+  "source_prediction": {
+    "source_id": "S1",
+    "equation": "MT_ms = 171.5 + 180.0 * log2(A/W+1)",
+    "location": "Figure 9(a), neutral, nominal ID",
+    "url": "https://www.yorku.ca/mack/chi2026.pdf"
+  },
+  "MT_definition": "previous_successful_click_to_first_click_for_current_target",
+  "error_handling_proposal": "record_first_click_error_then_reaim_current_target_until_success",
+  "participant_instruction_ja": "強調されたターゲットを、できるだけ速く、かつ正確にクリックしてください。",
+  "display": {
+    "diagonal_inch": 27,
+    "aspect_ratio_assumption": "16:9",
+    "width_mm_estimate": 597.7265033600158,
+    "height_mm_estimate": 336.2211581400089,
+    "native_resolution": null,
+    "os_scale": null,
+    "calibrated_css_pixels_per_mm": null,
+    "calibration": "measure_a_100_mm_line_with_a_physical_ruler"
+  },
+  "mouse": {
+    "model": null,
+    "dpi": null,
+    "sensitivity": null,
+    "acceleration": null
+  },
+  "predicted_equal_condition_mean_MT_ms": 772.3046894835022,
+  "caveat": "Literature transfer prediction, not a measured result or prediction interval.",
+  "conditions": [
+    {
+      "condition": "C1",
+      "A_mm": 90,
+      "W_mm": 20,
+      "ID_bits": 2.4594316186372973,
+      "layout_diameter_mm": 90.66102091791146,
+      "predicted_MT_ms_S1_neutral": 614.1976913547135,
+      "sensitivity_MT_ms_S2_refit": 435.50905898196754,
+      "adjacent_target_gap_mm": 1.696602445958149,
+      "A_native_pixels_QHD": 385.46057219287815,
+      "W_native_pixels_QHD": 85.65790493175069
+    },
+    {
+      "condition": "C2",
+      "A_mm": 90,
+      "W_mm": 10,
+      "ID_bits": 3.321928094887362,
+      "layout_diameter_mm": 90.66102091791146,
+      "predicted_MT_ms_S1_neutral": 769.4470570797251,
+      "sensitivity_MT_ms_S2_refit": 573.508495181978,
+      "adjacent_target_gap_mm": 11.696602445958149,
+      "A_native_pixels_QHD": 385.46057219287815,
+      "W_native_pixels_QHD": 42.828952465875346
+    },
+    {
+      "condition": "C3",
+      "A_mm": 180,
+      "W_mm": 20,
+      "ID_bits": 3.321928094887362,
+      "layout_diameter_mm": 181.32204183582292,
+      "predicted_MT_ms_S1_neutral": 769.4470570797251,
+      "sensitivity_MT_ms_S2_refit": 573.508495181978,
+      "adjacent_target_gap_mm": 23.393204891916298,
+      "A_native_pixels_QHD": 770.9211443857563,
+      "W_native_pixels_QHD": 85.65790493175069
+    },
+    {
+      "condition": "C4",
+      "A_mm": 180,
+      "W_mm": 10,
+      "ID_bits": 4.247927513443585,
+      "layout_diameter_mm": 181.32204183582292,
+      "predicted_MT_ms_S1_neutral": 936.1269524198453,
+      "sensitivity_MT_ms_S2_refit": 721.6684021509736,
+      "adjacent_target_gap_mm": 33.3932048919163,
+      "A_native_pixels_QHD": 770.9211443857563,
+      "W_native_pixels_QHD": 42.828952465875346
+    }
+  ]
+}

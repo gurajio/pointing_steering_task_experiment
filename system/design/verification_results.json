@@ -1,0 +1,103 @@
+{
+  "scope": "design_geometry_counts_and_schedule_only_not_measurement_app_tests",
+  "status": "passed",
+  "conditions": [
+    {
+      "condition": "C1",
+      "maxAmplitudeErrorMm": 1.4210854715202004e-14,
+      "minAdjacentGapMm": 1.6966024459580922,
+      "conservativeFootprintDiameterMm": 110.66102091791146
+    },
+    {
+      "condition": "C2",
+      "maxAmplitudeErrorMm": 1.4210854715202004e-14,
+      "minAdjacentGapMm": 11.696602445958092,
+      "conservativeFootprintDiameterMm": 100.66102091791146
+    },
+    {
+      "condition": "C3",
+      "maxAmplitudeErrorMm": 2.842170943040401e-14,
+      "minAdjacentGapMm": 23.393204891916184,
+      "conservativeFootprintDiameterMm": 201.32204183582292
+    },
+    {
+      "condition": "C4",
+      "maxAmplitudeErrorMm": 2.842170943040401e-14,
+      "minAdjacentGapMm": 33.393204891916184,
+      "conservativeFootprintDiameterMm": 191.32204183582292
+    }
+  ],
+  "uniqueDirectedAdjacentConditionPairs": 12,
+  "balancedPositionAcrossFourOrders": true,
+  "postSequencesPerConditionByAssignment": [
+    {
+      "C2": 2,
+      "C3": 2,
+      "C1": 2,
+      "C4": 2
+    },
+    {
+      "C3": 2,
+      "C4": 2,
+      "C2": 2,
+      "C1": 2
+    },
+    {
+      "C4": 2,
+      "C1": 2,
+      "C3": 2,
+      "C2": 2
+    },
+    {
+      "C1": 2,
+      "C2": 2,
+      "C4": 2,
+      "C3": 2
+    }
+  ],
+  "mainCounts": {
+    "familiarization": 52,
+    "training": 832,
+    "post": 104,
+    "all": 988
+  },
+  "alternative403Total": 1768,
+  "instructionMatchesSpecification": true,
+  "prototypeStandaloneNoExternalResources": true,
+  "plannedVerificationAfterImplementation": [
+    "physical_calibration",
+    "input_timing_accuracy",
+    "first_error_and_correction",
+    "pause_recovery",
+    "persistence_and_export"
+  ],
+  "browserPreviewVerification": {
+    "startScreen": "visually_checked",
+    "calibrationConversionExample": "100_mm_input_for_400_css_px_produces_4_css_px_per_mm",
+    "neutralInstructionScreen": "visually_checked",
+    "initialMiss": "active_target_unchanged",
+    "observedSelectionOrder": [
+      0,
+      6,
+      12,
+      5,
+      11,
+      4,
+      10,
+      3,
+      9,
+      2,
+      8,
+      1,
+      7,
+      0
+    ],
+    "conditionsVisuallyChecked": [
+      "C1",
+      "C4"
+    ],
+    "breakResume": "returns_to_unmeasured_start_prompt",
+    "completion": "example_counts_and_disabled_exports_visually_checked",
+    "measurementAndPersistenceNotImplemented": true
+  }
+}

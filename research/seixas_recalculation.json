@@ -1,0 +1,9 @@
+{
+  "source_doi": "10.6084/m9.figshare.1104376",
+  "raw_zip_sha256": "4116516fffa997b72db0c77775342c5df313e4d5763b4c067bcfe575f601c758",
+  "analyzed_participants": 10,
+  "analyzed_mouse_trials": 6000,
+  "all_8_blocks_MT_ms": 880.4371666666667,
+  "blocks_4_to_8_MT_ms": 867.7224,
+  "method": "mean trial MT per sequence, then per participant/block, then equal participant weights; complete balanced data"
+}
