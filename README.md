@@ -93,6 +93,12 @@ python3 -m http.server 8766 --bind 127.0.0.1
 /usr/local/bin/python3.12 analysis/analysis_horizontal_steering_experiment.py
 ```
 
+同一IDのC2・C3について習熟過程を比較する場合は、次も実行します。13試行を1周として、周平均MTの学習曲線、初期4周と終盤4周の変化、初回ミス率を出力します。
+
+```sh
+python analysis/analyze_same_id_learning.py
+```
+
 解析にはMatplotlibを使用します。入力・出力先はスクリプトの場所を基準に決まるため、別の作業ディレクトリから実行しても同じフォルダを使います。必要な場合は`--input-dir`と`--output-dir`で変更できます。
 
 - 対象は`countedAsTrial=true`の行。訓練（`training`）と事後（`post`）を分け、事後はC1〜C4別に集計します。
@@ -111,16 +117,19 @@ python3 -m http.server 8766 --bind 127.0.0.1
 | `training_mt_10trial_trend.png` / `post_mt_10trial_trend.png` | 10試行平均MTの推移 |
 | `training_error_10trial_trend.png` / `post_error_10trial_trend.png` | 10試行ごとのエラー率の推移 |
 | `training_error_10trial_histogram.png` / `post_error_10trial_histogram.png` | 区間別エラー率の分布（10パーセントポイント幅） |
+| `same_id_13trial_summary.csv` | C2・C3の13試行（1周）ごとのMT・初回ミス率 |
+| `same_id_learning_summary.csv` / `same_id_learning_comparison.csv` | 条件別の初期・終盤変化と学習曲線の傾き、その条件差 |
+| `same_id_learning_curve.png` / `same_id_learning_report.md` | 同一ID条件の習熟曲線と解釈・制約 |
 
 事後テストの画像はC1〜C4を分けた4パネルです。エラー率のヒストグラムは区間数を示し、末尾の短い区間も1件として数えます。
 
 ## 確認
 
 ```sh
-node --test system/tests/experiment.test.cjs
+node --test --test-concurrency=1 system/tests/*.test.cjs
 ```
 
-単一プロセスの軽量テスト20件が通過。訓練208＋事後104、予備実験の全15選択パターンと4割当順序、2条件520試行の完了、本実験の単一条件制約、周回の連続計時、全試行の中心間距離、周回末尾のミス修正と中断、旧記録の互換動作、編集後の幾何、CSVを確認しました。
+軽量テスト28件が通過。テストファイルは1つずつ実行します。訓練208＋事後104、予備実験の全15選択パターンと4割当順序、2条件520試行の完了、本実験の単一条件制約、周回の連続計時、全試行の中心間距離、周回末尾のミス修正と中断、旧記録の互換動作、編集後の幾何、CSVを確認しました。本実験・予備実験の校正・開始・再開では、スクロールバーの出入りによる通知で校正を取り消さず、実際の画面サイズ・倍率・全画面状態の変更では再校正を要求することも確認しています。
 
 ブラウザでは`TEST_CONTINUOUS_208`で312試行を完走し、CSV/JSONを読み返しました。訓練の開始クリックは1回、15か所の周回境界で前試行の成功時刻と次試行の開始時刻が一致し、移動元・移動先が同じ試行は0件でした。自動操作による検証記録であり、参加者データではありません。
 

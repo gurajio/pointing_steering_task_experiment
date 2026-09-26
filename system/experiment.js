@@ -24,6 +24,9 @@ function viewport() {
   return {width: window.innerWidth, height: window.innerHeight, dpr: window.devicePixelRatio,
     visualScale: window.visualViewport?.scale || 1};
 }
+function displaySignature() {
+  return JSON.stringify({...viewport(), fullscreen: !!document.fullscreenElement});
+}
 function matchesDisplay(value) {
   const current = viewport(), saved = value?.viewport;
   return !!saved && !!document.fullscreenElement && Object.keys(current).every(key => Math.abs(current[key] - saved[key]) < 0.001);
@@ -155,7 +158,7 @@ async function confirmCalibration() {
     cssPxPerMm: 400 / Number($('measured-mm').value), measuredCssPx: 400, measuredMm: Number($('measured-mm').value),
     checked100MmBothAxes: true, createdAtIso: new Date().toISOString(), viewport: viewport(), environment: environment()};
   calibrated = true;
-  displayKey = JSON.stringify(viewport());
+  displayKey = displaySignature();
   notice();
   if (engine) {
     engine.calibrate(calibration, stamp());
@@ -298,6 +301,9 @@ async function resumeExperiment() {
   if (engine.state.mode === 'boundary') await finishBoundary();
 }
 function displayChanged(reason) {
+  const key = displaySignature();
+  if (key === displayKey) return;
+  displayKey = key;
   calibrated = false;
   if (screen === 'calibration') { calibrationPreview(true); return; }
   if (engine && !['finished', 'aborted'].includes(engine.state.mode)) pause(reason);
@@ -409,7 +415,7 @@ async function initialize() {
     renderConditions(); await refreshHistory();
     $('open-settings').disabled = false;
     $('setup-next').disabled = false;
-    displayKey = JSON.stringify(viewport());
+    displayKey = displaySignature();
   } catch (error) { notice(error.message); }
 }
 $('setup-form').addEventListener('input', summarizePlan);
@@ -488,8 +494,7 @@ window.addEventListener('beforeunload', event => {
   if (engine && engine.session.status === 'active') { pause('page_unload'); event.preventDefault(); event.returnValue = ''; }
 });
 setInterval(() => {
-  const key = JSON.stringify(viewport());
-  if (key !== displayKey) { displayKey = key; displayChanged('display_changed'); }
+  displayChanged('display_changed');
   if (screen === 'break') {
     const seconds = Math.floor((performance.now() - breakStart) / 1000);
     $('break-time').textContent = `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;

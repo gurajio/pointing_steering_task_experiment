@@ -1,0 +1,2 @@
+﻿participant_id,session_id,c2_slope,c3_slope,slope_difference_c3_minus_c2,slope_difference_ci_low,slope_difference_ci_high,c2_mt_change_pct,c3_mt_change_pct,mt_improvement_difference_pp_c3_minus_c2,c2_error_change_pp,c3_error_change_pp
+P002,6cafcd86-5c31-46a7-83e8-471788f2c459,-0.04199316446223739,-0.03432662228901391,0.007666542173223476,-0.041876067164639486,0.05720915151108644,-8.441358500037222,-6.797292726938142,-1.6440657730990793,-7.6923076923076925,1.9230769230769218

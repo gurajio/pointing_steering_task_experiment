@@ -230,7 +230,7 @@ def main():
                 print(f'  {row["condition_id"]}: {row["n_trials"]}試行 / 平均MT {row["mean_mt_ms"]:.2f} ms / '
                       f'エラー率 {row["error_rate_pct"]:.2f}%（{row["n_errors"]}/{row["n_trials"]}）')
         plot_phase(phase, selected, [row for row in bins if row["phase"] == phase], args.output_dir)
-    print("\n10試行区切り: 1–10、11–20…（末尾は実際の試行数で集計）")
+    print("\n10試行区切り: 1～10、11～20…（末尾は実際の試行数で集計）")
     print(f"出力先: {args.output_dir.resolve()}")
 
 
